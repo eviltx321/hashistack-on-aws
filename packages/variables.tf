@@ -27,16 +27,19 @@ variable "aws_lb_controller_version" {
 variable "aws_lb_controller_role_arn" {
   type        = string
   description = "The ARN of the IAM role for the AWS Load Balancer Controller."
+  default = "data.terraform_remote_state.infrastructure.outputs.aws_lb_controller_role_arn"
 }
 
 variable "pod_cloudwatch_log_group_name" {
   type        = string
   description = "The name of the CloudWatch log group for pod logs."
+  default = "data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_log_group_name"
 }
 
 variable "pod_cloudwatch_logging_arn" {
   type        = string
   description = "The ARN of the IAM role for pod logging."
+  default = "data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_logging_arn"
 }
 
 variable "eks_cluster_name" {
@@ -171,9 +174,9 @@ data "terraform_remote_state" "infrastructure" {
 }
 
 locals {
-  aws_lb_controller_role_arn      = var.aws_lb_controller_role_arn        == try(data.terraform_remote_state.infrastructure.outputs.aws_lb_controller_role_arn, var.aws_lb_controller_role_arn)
-  pod_cloudwatch_log_group_name   = var.od_cloudwatch_log_group_name    == try(data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_log_group_name, var.pod_cloudwatch_log_group_name)
-  pod_cloudwatch_logging_arn      = var.pod_cloudwatch_logging_arn      == try(data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_logging_arn, var.pod_cloudwatch_logging_arn)
+  aws_lb_controller_role_arn        = try(data.terraform_remote_state.infrastructure.outputs.aws_lb_controller_role_arn, var.aws_lb_controller_role_arn)
+  pod_cloudwatch_log_group_name     = try(data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_log_group_name, var.pod_cloudwatch_log_group_name)
+  pod_cloudwatch_logging_arn        = try(data.terraform_remote_state.infrastructure.outputs.pod_cloudwatch_logging_arn, var.pod_cloudwatch_logging_arn)
   eks_cluster_name                  = try(data.terraform_remote_state.infrastructure.outputs.eks_cluster_name, var.eks_cluster_name)
   eks_oidc_provider_arn             = try(data.terraform_remote_state.infrastructure.outputs.eks_oidc_provider_arn, var.eks_oidc_provider_arn)
   eks_cluster_api_endpoint          = try(data.terraform_remote_state.infrastructure.outputs.eks_cluster_api_endpoint, var.eks_cluster_api_endpoint)
