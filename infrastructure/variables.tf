@@ -58,7 +58,7 @@ variable "hcp_consul_version" {
 variable "hcp_consul_tier" {
   type        = string
   description = "The tier of the Consul cluster."
-  default     = "plus"
+  default     = "standard"
 }
 
 variable "hcp_consul_public_endpoint" {
@@ -70,7 +70,7 @@ variable "hcp_consul_public_endpoint" {
 variable "hcp_vault_tier" {
   type        = string
   description = "The tier of the HCP Vault cluster. https://developer.hashicorp.com/hcp/docs/vault/get-started/deployment-considerations/tiers-and-features"
-  default     = "plus_small"
+  default     = "standard_small"
 }
 
 variable "hcp_vault_public_endpoint" {
