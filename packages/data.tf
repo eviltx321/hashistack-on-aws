@@ -4,9 +4,9 @@ data "terraform_remote_state" "infrastructure" {
   backend = "remote"
 
   config = {
-    organization = var.hcp_terraform_organization_name
+    organization = "EdV"
     workspaces = {
-      name = var.hcp_terraform_infrastructure_workspace_name
+      name = "infrastructure"
     }
   }
 }
