@@ -1,0 +1,207 @@
+[33m480973e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdemo[m[33m, [m[1;31morigin/demo[m[33m)[m static def for vars
+[33mf2663b2[m link to primary ips of eks nodes
+[33m0478b1f[m add cidr prefix
+[33mfbe532a[m use cidr notation
+[33md060048[m add preferred endpoints to boundary hosts
+[33m6703e51[m change boundary target to ingress filter
+[33m524336f[m change boundary filter
+[33m0ca23e8[m add boundary tag target
+[33m64a71bf[m switch to ssh target type and injected creds
+[33m81cdffd[m revert boundary targets
+[33m2e80d10[m self on boundary security group
+[33ma4a2bad[m switch target type
+[33m39bb480[m temp remove boundary group
+[33m466436e[m boundary targets
+[33md8ccfbe[m correct instance metadata fetch
+[33mcabf5eb[m correct datasource refs
+[33m48ac6eb[m add self managed workers for boundary
+[33me812eba[m add boundary user for dynamic host catalogs
+[33m45fec23[m boundary scopes and outputs
+[33m4f15429[m wait for auth request token
+[33mb3fa715[m switch to yum
+[33me0bd8cb[m reset workers
+[33m24b5376[m reset workers
+[33ma00e424[m force userdata recreation
+[33m90c5402[m use scripts for al2023
+[33m7368341[m add debug sg group
+[33m9fca2ec[m correct architecture
+[33m05acfc5[m correct ami id
+[33m63369e8[m self managed worker infra
+[33md07f11a[m initial boundary infra
+[33ma4ed250[m cleanup services
+[33m3355976[m correct container port
+[33mfad2fed[m change upstream
+[33mb6dab71[m move products to default namespace
+[33m8bf560c[m correct stack check
+[33m9c8b3ec[m correct ui stack name
+[33md1a469b[m ensure datasource usage
+[33m6459195[m switch namespace
+[33m0ca94c9[m remove unused sg rule
+[33mc827318[m add proxy security port opening
+[33m181421c[m change products port
+[33m01468cf[m add back defaults
+[33mfaf2234[m remove service defaults and add intention
+[33m50af3e5[m change products port
+[33m5a3d3fd[m add proxy defaults
+[33m70e78fc[m add service defaults for products
+[33ma99697f[m try https upstream
+[33m9a79d46[m reset vault token
+[33m9adfd81[m refresh vault token
+[33m9929c36[m add intentions for ui to products
+[33m5406335[m correct upstream dns lookup
+[33mac1d5dc[m change upstream uri to products
+[33m7cfbc0c[m add products upstream to ui
+[33m1a91f75[m update products service with own sa
+[33m385964e[m refresh vault bootstrap token
+[33m120b91a[m remove output for refresh
+[33m5495ea5[m refresh vault bootstrap token
+[33m4f2c0f4[m enable access to appkey backend role
+[33m3c500a0[m add products service
+[33md68b1d7[m allow direct access from lb
+[33mba02f0b[m add consul inject and t proxy
+[33m817d1f2[m remove consul inject
+[33mce4c0b1[m add consul inject
+[33m568c446[m use service own sa
+[33m299d6ed[m source correct environment config
+[33m48cee9e[m tweak custom entrypoint
+[33m1a5bf7b[m add custom entrypoint
+[33me1a1207[m add env variable from vault
+[33m937cfe2[m secret path typo
+[33m9d5b218[m updated secret path
+[33m76381cc[m correct secret annotation
+[33m9056ace[m specify namespace
+[33m7aa2547[m switch to appkey role
+[33m4cc31a0[m add ui service account to k8s auth role
+[33m5dd7f57[m revert service account chnage
+[33mafb37f8[m inject secrets into ui
+[33mcd97682[m kubernetes auth role and sa
+[33m2c455e1[m seed example secrets
+[33ma4be508[m vault connectivity
+[33mf833ebc[m vault connectivity
+[33mb93380c[m vault connectivity
+[33m8d7e4c7[m formatting
+[33m8dc3dbb[m output namespace for vault
+[33m9548d6f[m add bootstrap token for vault
+[33m7c44eb1[m correct ref
+[33m3604724[m correct host and jwt
+[33m8dc75e3[m vault service account and auth
+[33mf6992bb[m add dependency
+[33me4430e6[m add back vault helm chart
+[33m0884f40[m add back vpc cni and reset helm vault
+[33m4897858[m use injector vault addr
+[33mafa02d1[m reset vault helm
+[33mce459a0[m add sg for injector
+[33m135c6d4[m add vault injector back
+[33m87c5f47[m remove vault helm
+[33m30e455c[m default value for vault endpoints
+[33m9919329[m remove duplicate rule
+[33m992c006[m enable hcp to eks access
+[33mbd06af9[m add output vault urls
+[33m854c36c[m update cluster security group for hcp vault
+[33m9af8fca[m add hcp vault cluster
+[33mf3c5ee8[m add links to resources
+[33m30dfa62[m example trust policy formatting
+[33m00e8af5[m add initial readme setup instructions
+[33m2064424[m correct attribute
+[33m976ddd0[m add service check
+[33m4d383c3[m switch load balancer check
+[33m65976d2[m try load balancer check
+[33mc94d538[m add secret checks
+[33mcaa3f6c[m correct ref in checks
+[33m12872a0[m add eks nodegroup checks
+[33m87538bd[m acm arn variable description
+[33m855513f[m add acm cert arn to outputs
+[33m2d3df03[m make ssl conditional
+[33m1232b57[m add ssl redirect
+[33mde55db5[m add listen ports
+[33mebc9a08[m add additional annotatinos
+[33m5215d48[m only use annotations
+[33m9422f9c[m add ssl to ui
+[33me24739f[m correct record type
+[33m809dafb[m add route53 and acm config
+[33m223fd2d[m correct alb ref
+[33m6abdab4[m initial dns project and ui stack name
+[33md6827fd[m use remote state if available
+[33m69fd3e7[m use remote state if available
+[33m3a588a0[m initial move from input vars
+[33m55c9843[m Remove unused helm values
+[33ma3f747b[m re add the consul helm chart
+[33mfa81cc5[m add hvn as route to aws vpc
+[33m03d1531[m add back consul helm
+[33m63e3bb0[m add back pod logging
+[33m90da674[m reset helm installations
+[33m9dabcb1[m change to fqdn on kube api
+[33mecc6630[m redploy consul helm
+[33mce46c5a[m allow 443 from hvn
+[33m3ff95e5[m add remote access
+[33m4b48d93[m change helm chart version
+[33mfaed9f1[m redeploy consul helm chart
+[33m771c200[m add back hcp outputs
+[33mb49f03d[m alternative addon
+[33m1903068[m remove outputs
+[33me3f48b5[m reset consul and add vpc cni
+[33m8278ecd[m reset consul cluster
+[33m1b3997e[m reset consul cluster
+[33m7dfe727[m reset consul helm installation
+[33mccc2e5b[m remove consul from helm
+[33m46644c2[m change connect inject defaults
+[33m42dae12[m update cluster security group
+[33m64d49da[m enable consul namespaces
+[33mc7f6c5d[m correct annotations
+[33ma6ac026[m formatting
+[33mf23931b[m add in hcp provider
+[33mac047bf[m initial consul helm config
+[33mdfed6a5[m continued consul helm config
+[33m99a9cfc[m test outputs
+[33mb128688[m use consul cluster id
+[33m01a1808[m add consul cluster id
+[33mf7c6df7[m ref typos
+[33m77703ac[m add hvn id to outputs
+[33m16c7e97[m add outputs and inputs for connecting workspaces
+[33m672502c[m remove region var
+[33m4d1f66b[m remove region arg
+[33mef55dab[m deploy consul cluster
+[33m04d1ac4[m complete move to hashistack specific project
+[33m2ccc277[m move hvn to different hcp project
+[33mada0540[m directory structure
+[33m47c5bda[m add datasource workaround for active peering state
+[33m0b4fb7f[m variable typo
+[33mfcd681b[m add hcp and hvns
+[33mad868f7[m add hpa to ui deployment
+[33mbb66a64[m add back ingress
+[33med380e4[m add back fluent bit
+[33m0bba92a[m remove fluent bit
+[33m7f41335[m add back fluent bit
+[33m3291bad[m reset fluent bit
+[33m8c0984b[m correct oidc url
+[33mac97cbb[m update log iam role and remove ingress
+[33mb15b13c[m define initial app
+[33maf33e92[m use eks addons
+[33md32d0b7[m let helm manage service account
+[33m119f41e[m add back fluent bit with new logs driver
+[33mcef3b04[m reset fluent bit
+[33mb85073d[m add back fluent bit with correct casing
+[33m8ff9f01[m reset fluent bit
+[33m14a4e00[m add back fluent bit
+[33mbe75335[m reset fluent bit
+[33mb618372[m recreate service account for fluent bit
+[33mafafe69[m reset fluent bit
+[33mbaade72[m update fluent bit version
+[33m5e09247[m update fluent bit version
+[33md965526[m account for helm set name type
+[33m1282a07[m conform to RFC subdomain naming
+[33md07b430[m add correct auth source
+[33mc003b98[m output ref fix
+[33m2727bee[m initial k8s installations and outputs
+[33mc0fc3d8[m k8s and apps setup
+[33m9957697[m version cluster and lb controller
+[33m6e2be17[m correct resource refs
+[33mf9a3f12[m correct resource refs
+[33m03036f1[m correct resource refs
+[33md8e4881[m change default cidr block variable
+[33m36cbffb[m add readme description
+[33mfa7a5c8[m formatting and default vpc cidr block
+[33m9032705[m update security groups
+[33m6a61b8a[m add control plane security groups
+[33madbde75[m comments to iam resources
+[33ma89cdd3[m initial commit
