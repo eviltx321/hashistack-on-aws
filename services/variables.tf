@@ -18,10 +18,11 @@ variable "aws_default_region" {
   default     = "us-east-1"
 }
 
-# variable "eks_cluster_name" {
-#   type        = string
-#   description = "The name of the EKS cluster."
-# }
+variable "eks_cluster_name" {
+  type        = string
+  description = "The name of the EKS cluster."
+  default = null
+}
 
 variable "default_container_image" {
   type        = string
@@ -29,10 +30,11 @@ variable "default_container_image" {
   default     = "nicholasjackson/fake-service:v0.26.0"
 }
 
-# variable "public_subnet_ids" {
-#   type        = list(string)
-#   description = "The list of public subnet IDs."
-# }
+variable "public_subnet_ids" {
+  type        = list(string)
+  description = "The list of public subnet IDs."
+  default = null
+}
 
 variable "ui_service_name" {
   type        = string
