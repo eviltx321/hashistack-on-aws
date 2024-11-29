@@ -45,16 +45,19 @@ variable "pod_cloudwatch_logging_arn" {
 variable "eks_cluster_name" {
   type        = string
   description = "The name of the EKS cluster."
+  default = "data.terraform_remote_state.infrastructure.outputs.eks_cluster_name"
 }
 
 variable "eks_oidc_provider_arn" {
   type        = string
   description = "The ARN of the OIDC provider for the EKS cluster."
+  default = "data.terraform_remote_state.infrastructure.outputs.eks_oidc_provider_arn"
 }
 
 variable "eks_cluster_api_endpoint" {
   type        = string
   description = "The API endpoint for the EKS cluster."
+  default = "data.terraform_remote_state.infrastructure.outputs.eks_cluster_api_endpoint"
 }
 
 # HCP Variables
@@ -62,35 +65,38 @@ variable "eks_cluster_api_endpoint" {
 variable "hcp_hvn_id" {
   type        = string
   description = "The HVN ID for the HCP Consul cluster."
+  default = "data.terraform_remote_state.infrastructure.outputs.hcp_hvn_id"
 }
 
 variable "hcp_consul_public_endpoint" {
   type        = string
   description = "The public endpoint for the HCP Consul cluster."
-  default     = null
+  default     = "data.terraform_remote_state.infrastructure.outputs.hcp_consul_public_endpoint"
 }
 
 variable "hcp_consul_cluster_id" {
   type        = string
   description = "The ID of the HCP Consul cluster."
+  default = "data.terraform_remote_state.infrastructure.outputs.hcp_consul_cluster_id"
 }
 
 variable "hcp_consul_bootstrap_token" {
   type        = string
   description = "The bootstrap token for the HCP Consul cluster."
   sensitive   = true
+  default = "data.terraform_remote_state.infrastructure.outputs.hcp_consul_bootstrap_token"
 }
 
 variable "hcp_vault_public_endpoint" {
   type        = string
   description = "The public endpoint for the HCP Vault cluster."
-  default     = null
+  default     = "data.terraform_remote_state.infrastructure.outputs.hcp_vault_public_endpoint"
 }
 
 variable "hcp_vault_private_endpoint" {
   type        = string
   description = "The private endpoint for the HCP Vault cluster."
-  default     = null
+  default     = "data.terraform_remote_state.infrastructure.outputs.hcp_vault_private_endpoint"
 }
 
 variable "hcp_vault_cluster_bootstrap_token" {
